@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор з jQuery в iframe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<canvas id="starCanvas"></canvas>
+<body id="backgroundContainer">
+
+   
+    <div cl]ass="setingbuttonContainer">
+        <div class="setingbutton" id="setingbutton"><i class="fa-solid fa-gear rotate360" ></i ></div>
+        <div class="panelCont">
+        
+   <div class="language" id="htmlbtn">     <div class="kolo"></div><p> HTML CODE</p>  </div>
+  <div class="language" id="cssbtn">     <div class="kolo"></div>  <p> CSS CODE</p>  </div> 
+  <div class="language" id="jsbtn">     <div class="kolo"></div> <p>   JS CODE</p>  </div>
+  <div class="changecolor" id="colorbtn">  <input type="color" id="colorPicker"> </div>
+  <div class="changecolor" id="uploadBtn">  <div class="kolo"></div> <P>UPLOAD IMAGE</P>  </div>
+  <div class="changecolor" id="changeall">  <div class="kolo" id="kolos"></div>   <p>INTERFACE</p> </div>
+  <div class="changecolor" id="musicbtn">  <i class="fa-solid fa-music"></i><audio id="music" src="./puma_puma_puma_teu_-_puma_puma_puma_teu_77974512 (mp3cut.net).mp3"></audio> </div>
+  <a href="https://github.com/letfin" target="_blank"> <div class="changecolor" id="github" ><i class="fa-brands fa-github"></i></div></a>
+
+
+
+
+   </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="editor">
+           <div class="html">
+            <label for="htmlCode" class="html"><p>HTML код</p></label>
+            <textarea id="htmlCode" placeholder="Введіть HTML код "></textarea>
+        
+           </div> 
+      
+           <div class="css">
+            <label for="cssCode" class="css"><p>CSS код</p></label>
+            <textarea id="cssCode" placeholder="Введіть CSS код"></textarea>
+           </div>
+    
+           <div class="js">
+            <label for="jsCode" class="js"><p>JS код</p></label>
+            <textarea id="jsCode" placeholder="Введіть JS код"></textarea>
+           </div>
+    
+           
+           <button id="runBtn" class="runBtn"><p>Запустити код</p></button>
+        </div>
+      
+    
+        <div class="output" id="output">
+            <h2>Результат</h2>
+            <iframe id="resultFrame"></iframe>
+            <div id="suggestionBox"></div>
+        </div>
+    </div>
+ 
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
